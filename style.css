@@ -1,0 +1,157 @@
+body{
+    align-items: center;
+    background-color: rgb(102,9,9);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/*------------------HEADER-------------------*/
+
+header{
+    align-items: center;
+    background-color: rgb(42, 42, 42);
+    box-shadow: 0em 0.25em 0.5em rgb(68, 68, 68);
+    display: flex;
+    padding: 1em;
+    height: 5em;
+    width: 60%;
+}
+
+header button {
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0.5em 1em 1em black;
+    height: 3em;
+   position: absolute;
+   right: 20%;
+   width: 15em;
+}
+
+header h1{
+    color: white;
+    font-family: rig-solid-light-halftone, sans-serif; 
+    margin-right: 1em;
+}
+
+header input{
+    border-radius: 0.5em;
+    box-shadow: 0.5em 1em 1em black;
+    height: 30%;
+    width: 50%;
+}
+
+header button:hover{
+    background-color: rgb(102, 9, 9);
+    color: white;
+    cursor: pointer;
+}
+
+header input:focus{
+    border: 0.25em solid rgb(102, 9, 9);
+}
+
+/*------------------END HEADER-------------------*/
+
+/*------------------CAROUSEL---------------------*/
+.carousel{
+    background-color: white;
+    box-shadow: 0em 0.25em 0.5em rgb(68, 68, 68);
+    height: 10em;
+    padding: 1em;
+    width: 60%;
+    z-index: 1;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+   scroll-snap-points-x: repeat(15em);
+  scroll-snap-type: mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.slider > img {
+  flex-shrink: 0;
+  height: 10em;
+  margin: 0em 1em;
+}
+
+.slider > img:hover{
+    cursor: pointer;
+}
+/*------------------END CAROUSEL---------------------*/
+
+/*------------------VIEWER---------------------*/
+
+.movie-info{
+    display: flex;
+}
+
+.viewer{
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 1em;
+    width: 60%;
+}
+
+.viewer > h1 {
+    font-family: gothic-open-shaded, sans-serif; 
+    margin: 0em;
+}
+
+.movie-info h1{
+    font-family: gothic-open-shaded, sans-serif; 
+    font-size: 2em;
+    margin: 0em 0em 0.5em 0em;
+}
+
+.movie-info li {
+    font-family: abolition-soft, sans-serif;
+    font-size: 1.5em;
+}
+
+.movie-info p {
+    font-size: 1em;
+}
+
+.movie-info section{
+    margin: 0em 0.5em;
+}
+
+.movie-info section:nth-child(3){
+    width: 30%;
+}
+
+/*------------------END VIEWER---------------------*/
+
+/*------------------MEDIA QUERIES---------------------*/
+@media only screen and (max-width: 880px){
+    .movie-info{
+        flex-direction: column;
+    }
+
+    .movie-info section:nth-child(3){
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 520px){
+   header{
+       flex-direction: column;
+       height: 7em;
+   }
+
+   header h1{
+       font-size: 3em;
+       margin: 0em;
+   }
+
+   header input{
+       width: 80%;
+   }
+}
+/*------------------MEDIA QUERIES---------------------*/
